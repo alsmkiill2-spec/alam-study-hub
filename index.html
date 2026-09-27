@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alam Study Hub</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 34px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            font-size: 45px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        button {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 12px;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #content {
+            margin-top: 30px;
+        }
+
+        .content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .content-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .chapter {
+            background: #eef4ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .chapter:hover {
+            background: #dbeafe;
+        }
+
+        .question {
+            background: #f8fafc;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+        }
+
+        .answer {
+            margin-top: 8px;
+            color: #166534;
+        }
+
+        .mcq {
+            background: #f8fafc;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>📚 Alam Study Hub</h1>
+
+    <p>Learn • Practice • Improve</p>
+
+</header>
+
+
+
+<div class="container">
+
+
+    <div class="welcome">
+
+        <h2>Welcome to Alam Study Hub 👋</h2>
+
+        <p>Class 11 Study Material</p>
+
+    </div>
+
+
+
+    <!-- SUBJECTS -->
+
+    <div class="subjects">
+
+
+        <div class="card">
+
+            <div class="icon">⚡</div>
+
+            <h2>Physics</h2>
+
+            <p>Class 11 Physics</p>
+
+            <button onclick="showPhysics()">
+                Open Physics
+            </button>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">🧪</div>
+
+            <h2>Chemistry</h2>
+
+            <p>Class 11 Chemistry</p>
+
+            <button onclick="showChemistry()">
+                Open Chemistry
+            </button>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">🧬</div>
+
+            <h2>Biology</h2>
+
+            <p>Class 11 Biology</p>
+
+            <button onclick="showBiology()">
+                Open Biology
+            </button>
+
+        </div>
+
+
+    </div>
+<div class="card">
+
+    <div class="icon">📐</div>
+
+    <h2>Maths</h2>
+
+    <p>Class 11 Maths Notes & Questions</p>
+
+    <button onclick="showMaths()">
+        Open Maths
+    </button>
+
+</div>
+
+
+    <!-- CONTENT -->
+
+    <div id="content"></div>
+
+
+</div>
+
+
+
+<footer>
+
+    <p>© 2026 Alam Study Hub</p>
+
+    <p>Made with ❤️ for Students</p>
+
+</footer>
+
+
+
+function showMaths() {
+
+    document.getElementById("content").innerHTML = `
+
+        <div class="content-box">
+
+            <h2>📐 Class 11 Maths</h2>
+
+            <h3>📚 Chapters</h3>
+
+            <div class="chapter">
+                📘 Chapter 1 – Sets
+            </div>
+
+            <div class="chapter">
+                📘 Chapter 2 – Relations and Functions
+            </div>
+
+            <div class="chapter">
+                📘 Chapter 3 – Trigonometric Functions
+            </div>
+
+            <div class="chapter">
+                📘 Chapter 4 – Principle of Mathematical Induction
+            </div>
+
+            <h3 style="margin-top:20px;">
+                📝 Study Material
+            </h3>
+
+            <p>Important Questions</p>
+            <p>✅ MCQs</p>
+            <p>🔢 Important Questions & Solutions</p>
+
+        </div>
+
+    `;
+}<script>
+
+
+
+/* PHYSICS */
+
+function showPhysics() {
+
+    document.getElementById("content").innerHTML = `
+
+        <div class="content-box">
+
+            <h2>⚡ Class 11 Physics</h2>
+
+            <p>Select a chapter:</p>
+
+
+            <div class="chapter"
+                 onclick="showChapter1()">
+
+                📘 Chapter 1 – Units and Measurements
+
+            </div>
+
+
+            <div class="chapter">
+
+                📘 Chapter 2 – Motion in a Straight Line
+
+            </div>
+
+
+            <div class="chapter">
+
+                📘 Chapter 3 – Motion in a Plane
+
+            </div>
+
+
+            <div class="chapter">
+
+                📘 Chapter 4 – Laws of Motion
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+
+
+/* CHAPTER 1 */
+
+function showChapter1() {
+
+    document.getElementById("content").innerHTML = `
+
+        <div class="content-box">
+
+            <h2>📘 Chapter 1 – Units and Measurements</h2>
+
+            <p>
+                Class 11 Physics – Important Study Material
+            </p>
+
+
+            <h3 style="margin-top:20px;">
+                📝 Important Questions
+            </h3>
+
+
+            <div class="question">
+
+                <b>Q1. What is a physical quantity?</b>
+
+                <div class="answer">
+
+                    A physical quantity is a quantity that can
+                    be measured and expressed by a number and a unit.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question">
+
+                <b>Q2. What are fundamental quantities?</b>
+
+                <div class="answer">
+
+                    Fundamental quantities are basic physical
+                    quantities which are independent of other quantities.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question">
+
+                <b>Q3. What is a derived quantity?</b>
+
+                <div class="answer">
+
+                    A derived quantity is obtained by combining
+                    fundamental quantities mathematically.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question">
+
+                <b>Q4. What is dimensional formula?</b>
+
+                <div class="answer">
+
+                    A dimensional formula represents a physical
+                    quantity in terms of fundamental quantities.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question">
+
+                <b>Q5. What is dimensional analysis?</b>
+
+                <div class="answer">
+
+                    Dimensional analysis is the method of using
+                    dimensions to check physical equations and relationships.
+
+                </div>
+
+            </div>
+
+
+
+            <h3 style="margin-top:25px;">
+                ✅ 20 MCQs
+            </h3>
+
+
+
+            <div class="mcq">
+
+                <b>1. SI unit of length is:</b>
+
+                <p>A) cm</p>
+                <p>B) metre</p>
+                <p>C) km</p>
+                <p>D) inch</p>
+
+                <b>Answer: B) metre</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>2. SI unit of mass is:</b>
+
+                <p>A) gram</p>
+                <p>B) kilogram</p>
+                <p>C) tonne</p>
+                <p>D) pound</p>
+
+                <b>Answer: B) kilogram</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>3. SI unit of time is:</b>
+
+                <p>A) minute</p>
+                <p>B) hour</p>
+                <p>C) second</p>
+                <p>D) day</p>
+
+                <b>Answer: C) second</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>4. Which is a fundamental quantity?</b>
+
+                <p>A) Force</p>
+                <p>B) Work</p>
+                <p>C) Length</p>
+                <p>D) Pressure</p>
+
+                <b>Answer: C) Length</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>5. SI unit of temperature is:</b>
+
+                <p>A) Celsius</p>
+                <p>B) Fahrenheit</p>
+                <p>C) Kelvin</p>
+                <p>D) Joule</p>
+
+                <b>Answer: C) Kelvin</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>6. SI unit of electric current is:</b>
+
+                <p>A) Volt</p>
+                <p>B) Ampere</p>
+                <p>C) Ohm</p>
+                <p>D) Watt</p>
+
+                <b>Answer: B) Ampere</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>7. SI unit of amount of substance is:</b>
+
+                <p>A) mole</p>
+                <p>B) gram</p>
+                <p>C) litre</p>
+                <p>D) kilogram</p>
+
+                <b>Answer: A) mole</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>8. SI unit of luminous intensity is:</b>
+
+                <p>A) lux</p>
+                <p>B) candela</p>
+                <p>C) lumen</p>
+                <p>D) watt</p>
+
+                <b>Answer: B) candela</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>9. Dimension of velocity is:</b>
+
+                <p>A) [LT]</p>
+                <p>B) [LT⁻¹]</p>
+                <p>C) [LT²]</p>
+                <p>D) [L⁻¹T]</p>
+
+                <b>Answer: B) [LT⁻¹]</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>10. Dimension of acceleration is:</b>
+
+                <p>A) [LT⁻¹]</p>
+                <p>B) [LT⁻²]</p>
+                <p>C) [L²T⁻¹]</p>
+                <p>D) [MLT⁻²]</p>
+
+                <b>Answer: B) [LT⁻²]</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>11. Dimension of force is:</b>
+
+                <p>A) [MLT⁻²]</p>
+                <p>B) [ML²T⁻²]</p>
+                <p>C) [MLT⁻¹]</p>
+                <p>D) [M⁰LT⁻¹]</p>
+
+                <b>Answer: A) [MLT⁻²]</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>12. SI unit of force is:</b>
+
+                <p>A) Joule</p>
+                <p>B) Newton</p>
+                <p>C) Watt</p>
+                <p>D) Pascal</p>
+
+                <b>Answer: B) Newton</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>13. SI unit of work is:</b>
+
+                <p>A) Newton</p>
+                <p>B) Joule</p>
+                <p>C) Watt</p>
+                <p>D) Pascal</p>
+
+                <b>Answer: B) Joule</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>14. SI unit of power is:</b>
+
+                <p>A) Joule</p>
+                <p>B) Newton</p>
+                <p>C) Watt</p>
+                <p>D) Pascal</p>
+
+                <b>Answer: C) Watt</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>15. SI unit of pressure is:</b>
+
+                <p>A) Pascal</p>
+                <p>B) Joule</p>
+                <p>C) Watt</p>
+                <p>D) Newton</p>
+
+                <b>Answer: A) Pascal</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>16. Which one is a derived quantity?</b>
+
+                <p>A) Length</p>
+                <p>B) Mass</p>
+                <p>C) Time</p>
+                <p>D) Velocity</p>
+
+                <b>Answer: D) Velocity</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>17. Number of SI base quantities is:</b>
+
+                <p>A) 5</p>
+                <p>B) 6</p>
+                <p>C) 7</p>
+                <p>D) 8</p>
+
+                <b>Answer: C) 7</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>18. Which is NOT an SI base unit?</b>
+
+                <p>A) metre</p>
+                <p>B) kilogram</p>
+                <p>C) second</p>
+                <p>D) Newton</p>
+
+                <b>Answer: D) Newton</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>19. Dimensional analysis is useful for:</b>
+
+                <p>A) Checking equations</p>
+                <p>B) Finding dimensions</p>
+                <p>C) Converting units</p>
+                <p>D) All of these</p>
+
+                <b>Answer: D) All of these</b>
+
+            </div>
+
+
+
+            <div class="mcq">
+
+                <b>20. Which quantity has no dimensions?</b>
+
+                <p>A) Velocity</p>
+                <p>B) Force</p>
+                <p>C) Strain</p>
+                <p>D) Acceleration</p>
+
+                <b>Answer: C) Strain</b>
+
+            </div>
+
+
+
+            <h3 style="margin-top:25px;">
+                🔢 Important Numericals
+            </h3>
+
+
+
+            <div class="question">
+
+                <b>Numerical 1:</b>
+
+                <p>
+                    Convert 5 km into metres.
+                </p>
+
+                <div class="answer">
+
+                    1 km = 1000 m
+
+                    <br>
+
+                    5 km = 5 × 1000
+
+                    <br>
+
+                    <b>Answer = 5000 m</b>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question">
+
+                <b>Numerical 2:</b>
+
+                <p>
+                    A car travels 100 m in 5 seconds.
+                    Find its average speed.
+                </p>
+
+                <div class="answer">
+
+                    Speed = Distance / Time
+
+                    <br>
+
+                    = 100 / 5
+
+                    <br>
+
+                    <b>Answer = 20 m/s</b>
+
+                </div>
+
+            </div>
+
+
+
+            <button onclick="showPhysics()">
+                ⬅ Back to Physics
+            </button>
+
+
+        </div>
+
+    `;
+}
+
+
+
+/* CHEMISTRY */
+
+function showChemistry() {
+
+    document.getElementById("content").innerHTML = `
+
+        <div class="content-box">
+
+            <h2>🧪 Class 11 Chemistry</h2>
+
+            <p>
+                Chemistry study material will be added soon.
+            </p>
+
+        </div>
+
+    `;
+}
+
+
+
+/* BIOLOGY */
+
+function showBiology() {
+
+    document.getElementById("content").innerHTML = `
+
+        <div class="content-box">
+
+            <h2>🧬 Class 11 Biology</h2>
+
+            <p>
+                📘 Chapter 1 – The Living World
+            </p>
+
+            <p>
+                📝 Important Questions
+            </p>
+
+            <p>
+                ✅ MCQs
+            </p>
+
+        </div>
+
+    `;
+}
+
+
+</script>
+
+
+</body>
+
+</html>
